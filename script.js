@@ -1269,6 +1269,298 @@ function a11(a,b,c){
 
 a11(10,20,30)
 
+console.clear();
+
+
+
+
+// DataStarcture
+
+// spread operator
+
+// array spread operator - [...]
+
+// example 
+
+
+let arr1 = [1,2,3,4]
+let arr2 = [5,6,7,8]
+
+let totalArr = [...arr1,...arr2,9,10]
+
+console.log(totalArr);
+console.log(totalArr);
+
+
+// object spread operator - {...}
+
+
+let obj1 = {
+    name1 : "surya",
+    role  : "javadeveloper",
+    salary: 500000
+}
+let obj2 = {
+    name11 : "ravi",
+    role1  : "SAPdeveloper",
+    salary1: 600000
+}
+
+
+let totalObj = {...obj1,...obj2}
+
+console.log(totalObj);
+
+
+
+
+// rest operator
+
+// function - (...)
+
+// example 
+
+
+function memoryManagement(a,b,...c){
+    console.log(a + b + c[0]);
+    console.log(c);
+    
+    
+    
+}
+
+memoryManagement(1,2,3,4,5,6,7,8,9)
+
+
+
+
+// deStracture
+
+// array
+
+
+let random = [1,2,3,4]
+
+let a1 = random[0]
+let a2 = random[1]
+let a3 = random[2]
+let a4 = random[3]
+
+console.log(a1, a2 , a3 ,a4);
+
+// destracture 
+
+
+let [b1,b2,b3,b4] = random
+
+console.log(b1 , b2 , b3 , b4);
+
+
+// nested value 
+
+let nested = [1,2,[3,4,[5,6,[7]]]]
+
+let c1 = nested[0]
+let c2 = nested[1]
+let c3 = nested[2][0]
+let c4 = nested[2][1]
+let c5 = nested[2][2][0]
+let c6 = nested[2][2][1]
+let c7 = nested[2][2][2][0]
+
+console.log(c1,c2,c3,c4,c5,c6,c7);
+
+
+// destracture 
+
+let [d1,d2,[d3,d4,[d5,d6,[d7]]]] = nested
+
+console.log(d1,d2,d3,d4,d5,d6,d7);
+
+
+
+// object destracture 
+
+
+let objVal = {
+    fruit : "apple",
+    nutrician : "b12",
+    benefits  : "increase blood"
+}
+
+
+let e1 = objVal.fruit
+let e2 = objVal.nutrician
+let e3 = objVal.benefits
+
+console.log(e1,e2,e3);
+
+
+// destracture 
+
+
+let {fruit,nutrician,benefits} = objVal
+
+console.log(fruit,nutrician,benefits);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.clear();
+
+
+
+// Array Advance Concept 
+
+let array = [1,2,3,4,5,6,"string",true,undefined,null,[1,2,3],{j:9}]
+
+console.log(array);
+
+console.log(array[0]);
+console.log(array[3]);
+
+
+console.log(array[array.length-1]);
+
+// homogenous 
+
+// hetrogenous
+
+// flexible
+
+
+// Array manipulation method 
+
+// if you use add method u can add multiple value.
+// if you use remove method u can remove only one value.
+
+
+let random1 = [1,2,3]
+
+// push() - we can array of last value add
+
+random1.push(4,5,6,7,8)
+// pop()  - we can array of last value remove
+random1.pop()
+// shift()- we can array of first value remove
+random1.shift()
+// unshift() - we can array of first value add
+random1.unshift(0,1)
+console.log(random1);
+// splice() - we can array whatever place add or remove
+
+let random2 = [1,2,3,50,60,7,8]
+
+// splice()// startingIndex , removeCount , add value
+
+random2.splice(3,2,4,5,6)
+
+console.log(random2);
+
+
+
+// Array merge method
+
+// concat()
+
+let ar1 = [1,2,3,4,5]
+let ar2 = [6,7,8,9,10]
+
+let TotalAr = ar1.concat(ar2,11,12)
+
+console.log(TotalAr);
+
+
+// slice()
+
+let random4 = [1,2,3,50,60,7,8]
+
+let particular = random4.slice(3,5) // si , ei + 1
+
+console.log(particular);
+
+
+// flat()
+
+let nested1 = [1,2,3,[4,5,[6,7,[8]]]]
+
+let flatVal = nested1.flat(Infinity)
+
+console.log(flatVal);
+
+
+// fill()
+
+let random5 = [1,2,3,4] // 1,2,3,"four"
+
+random5.fill("four",3,4) // value , si , ei+1
+
+console.log(random5);
+
+
+// includes()
+
+let random6 = [1,6,3,9,56,34]
+
+let inVal = random6.includes(6)
+
+console.log(inVal);
+
+
+// indexOf()
+
+let random7 = [1,2,3,4,3,2,1]
+
+let indexOfVal = random7.indexOf(2,3)
+
+console.log(indexOfVal);
+
+
+// lastIndexOf()
+
+let lastVal = random7.lastIndexOf(2,4)
+
+console.log(lastVal);
+
+
+// sort()
+
+let random8 = [1,2,3000,4897,9,0,73000,8] // 7.3000 < 9 
+
+let sortVal1 = random8.sort()
+
+console.log(sortVal1);
+
+
+// reverse()
+
+
+let random9 = [2,5,7,8,6,2]
+
+console.log(random9.reverse());
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
