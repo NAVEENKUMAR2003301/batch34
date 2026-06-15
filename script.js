@@ -1549,6 +1549,162 @@ let random9 = [2,5,7,8,6,2]
 
 console.log(random9.reverse());
 
+console.clear();
+
+
+
+
+
+
+
+// Array Higher order method 
+
+// function function1(){
+
+// }
+// function function2(){
+
+// }
+
+// function1(function2())
+
+
+let games = ["GTA","COD","BGMI","NF"]
+// forEach()
+
+let newForEach = games.forEach((currentElement,index,TotalArray)=>{
+    return(currentElement);  
+    
+})
+
+console.log(newForEach);
+
+
+// map()
+
+let newMap = games.map((a,b,c)=>{
+    return(a);
+})
+
+console.log(newMap);
+
+
+// filter()
+
+let employee = [
+    {name : "a", salary : 100000},
+    {name : "b", salary : 200000},
+    {name : "c", salary : 300000},
+    {name : "d", salary : 400000},
+    {name : "e", salary : 300000},
+    {name : "f", salary : 200000}
+]
+
+
+let filterEmployee = employee.filter((c,i,t)=>{
+
+    return c.salary > 200000
+
+})
+
+console.log(filterEmployee);
+
+
+// find()
+
+let firstEmployee = employee.find((c,i,t)=>{
+    return c.salary > 200000;
+})
+
+console.log(firstEmployee);
+
+
+
+employee = [
+  { name: "a", salary: 100000 },
+  { name: "b", salary: 200000 },
+  { name: "c", salary: 300000 },
+  { name: "d", salary: 400000 },
+  { name: "e", salary: 300000 },
+  { name: "f", salary: 200000 },
+];
+// reduce()
+
+let totalCalcSalary = employee.reduce((acc,c,i,t)=>{
+return acc + c.salary
+
+    // 0   +  1 = 1
+    // 1   +  2 = 3
+    // 3   +  3 = 6
+    // 6   +  4 = 10
+    // 10  +  3 = 13
+    // 13  +  2 = 15
+    // 15  +  0
+},0) // 1 // 3 // 6 // 10 // 13 // 15
+
+console.log(totalCalcSalary);
+
+// some() - or
+
+let someArr = [1,2,3,4,5,6]
+
+let someVal = someArr.some((c,i,t)=>{
+
+    return c%2==1
+
+    //     1 % 2 == 1 --> true
+    //     2 % 2 == 1 --> false
+    //     3 % 2 == 1 --> true
+    //     4 % 2 == 1 --> false
+    //     5 % 2 == 1 --> true
+    //     6 % 2 == 1 --> fasle
+
+    // true || false || true || false || true || false = true
+
+})
+
+console.log(someVal);
+
+
+// every() - And
+
+let everyArr = [2,4,6,8]
+
+let everyVal = everyArr.every((c,i,t)=>{
+
+    return c % 2 == 0
+
+})
+
+console.log(everyVal);
+
+
+// sort()
+
+
+let sortArr = [23,456,1,98,100,300]
+
+let sortVal = sortArr.sort((a,b)=>{
+
+    return b-a
+
+})
+
+console.log(sortVal);
+
+
+
+// arr to str 
+
+// join()
+
+// toString()
+
+let sample = [1,2,3,4]
+
+console.log(sample.join("hi"));
+
+console.log(sample.toString());
 
 
 
@@ -1557,12 +1713,97 @@ console.log(random9.reverse());
 
 
 
+// String()
+
+
+//   charAt(), index --> value
+
+let str = "javascript"
+
+console.log(str.charAt(2));
+
+
+//   charCodeAt(), index  --> asscii 
+
+console.log(str.charCodeAt(0));
+
+
+//   length,
+
+console.log(str.length);
+
+
+//   slice(), si,ei+1
+
+let str1 = "jaiHellojai"
+
+console.log(str1.slice(3,8));
+
+
+//   toUpperCase(),
+
+let str2 = "JAVAscript"
+
+console.log(str2.toUpperCase());
+
+
+//   toLowerCase(),
+
+console.log(str2.toLowerCase());
+
+//   trim(),
+
+let str3 = " hi "
+
+console.log(str3.trim()[0]);
+
+
+//   includes(),
+
+let str4 = "heljkkjjnsknsesdfab"
+
+console.log(str4.includes("H"));
+
+//   startsWith(),
+
+let str5 = "hihello"
+
+console.log(str5.startsWith("g"));
+
+
+//   endsWith();
+
+console.log(str5.endsWith("o"));
+
+
+//   indexOf(),
+
+let str6 = "hello"
+
+console.log(str6.indexOf("l",3));
+
+// lastIndexOf
+
+let str7 = "how are you"
+
+console.log(str7.lastIndexOf("o",8));
+
+
+//   replace(),
+
+let str8 = "python developer"
+
+console.log(str8.replace("python","javascript"));
+
+
+// repeat 
+
+console.log(str8.repeat(1));
 
 
 
+//   split(),
 
+let str9 = "spider-man-tony stark"
 
-
-
-// // // 4. date
-
+console.log(str9.split("-"));
