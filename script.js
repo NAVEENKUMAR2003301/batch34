@@ -1807,3 +1807,244 @@ console.log(str8.repeat(1));
 let str9 = "spider-man-tony stark"
 
 console.log(str9.split("-"));
+
+
+
+console.clear();
+
+
+
+// Date()
+
+
+let data =new Date()
+
+console.log(data);
+
+
+// get()
+
+// fullYear 
+
+
+let data1 = new Date()
+
+console.log(data1.getFullYear());
+
+
+// month 
+
+console.log(data1.getMonth());
+
+// date
+
+console.log(data1.getDate());
+
+// day 
+
+console.log(data1.getDay());
+
+
+// hours
+
+console.log(data1.getHours());
+
+// minutes 
+
+console.log(data1.getMinutes());
+
+// seconds 
+
+console.log(data1.getSeconds());
+
+
+
+// time 
+
+console.log(data1.toLocaleTimeString());
+
+// date
+
+console.log(data1.toLocaleDateString());
+
+// both
+
+console.log(data1.toLocaleString());
+
+
+
+
+
+
+
+// set()
+
+
+
+let data2 = new Date()
+
+console.log(data2);
+
+
+// year 
+
+data2.setFullYear(2003)
+
+console.log(data2);
+
+
+// month
+
+data2.setMonth(0)
+
+console.log(data2);
+
+// date 
+
+data2.setDate(30)
+
+console.log(data2);
+
+
+// hour
+
+data2.setHours(12)
+
+console.log(data2);
+
+// minutes 
+
+data2.setMinutes(12)
+
+console.log(data2);
+
+// seconds 
+
+data2.setSeconds(12)
+
+console.log(data2);
+
+
+console.clear();
+
+
+// birthday day finder
+
+
+// let year = prompt("enter your dob year")
+// let month= prompt("enter your dob month use number")
+// let date = prompt("enter your dob date")
+
+
+// let birth = new Date()
+
+// birth.setFullYear(year)
+// birth.setMonth(month-1)
+// birth.setDate(date)
+
+// let dayVal = birth.getDay()
+
+// let weekDays = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
+
+
+// alert(weekDays[dayVal]);
+
+
+
+
+
+// Async 
+
+// // setTimeout
+
+
+// setTimeout(()=>{
+
+//     console.log("hello");
+    
+
+// },5000)
+
+// setTimeout(()=>{
+
+//     console.log("hi");
+    
+
+// },1000)
+
+// // setInterval 
+
+// // setInterval(()=>{
+// //     console.log("welcome");
+    
+// // },2000)
+
+
+
+
+function one(){
+    console.log("one");
+    
+}
+
+function two(){
+    console.log("two");
+    
+}
+
+function three(){
+    console.log("three");
+    
+}
+
+
+one()
+setTimeout(two,1000)
+three()
+
+// promise
+
+
+// resolve()    - successfull data  - then()
+
+// reject()     - error data        - catch()
+
+// bending()    - coming data       - finally()
+
+
+// API - Application programmable interface
+
+fetch("https://fakestoreapi.com/products/")
+.then((data)=>{
+
+    
+    // json to js --> .json()
+    // js to json --> .stringify()
+    
+    return data.json()
+    
+    
+
+})
+
+.then((jsData)=>{
+
+   jsData.forEach((c,i,t)=>{
+
+    console.log(c.title);
+    
+
+   })
+    
+
+})
+
+.catch((errorData)=>{
+    console.log(errorData);
+    
+})
+
+.finally(()=>{
+    console.log("api is running");
+    
+})
