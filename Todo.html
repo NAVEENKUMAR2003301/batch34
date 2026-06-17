@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo Application</title>
+</head>
+<style>
+    .active{
+        font-size: 30px;
+        color: blueviolet;
+        background-color: aqua;
+        animation: left .5s linear;
+    }
+
+    .active:hover{
+        background-color: red;
+        color: white;
+    }
+
+    @keyframes left{
+        0%{
+            transform: translateX(-100px);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+</style>
+<body>
+    
+
+
+    <input type="text" placeholder="enter your plan">
+    <button>Add</button>
+
+    <ol></ol>
+
+    <button><a href="./Api.html">API PROJECT</a></button>
+
+
+    <script>
+
+
+// select the all content
+
+
+let input = document.querySelector("input")
+let button= document.querySelector("button")
+let ol    = document.querySelector("ol")
+
+
+
+button.addEventListener("click",()=>{
+
+    let inputValue = input.value
+    
+
+
+    // dynamic tag
+
+    let li = document.createElement("li")
+
+    // input value feed in li tag inside
+
+    li.innerText = inputValue
+    li.setAttribute("class","active")
+
+    // ol inside give li tag
+
+    ol.append(li)
+
+    li.addEventListener("click",()=>{
+        li.remove()
+    })
+
+    input.value = ""
+
+
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
